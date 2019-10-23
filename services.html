@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Surya Narayanan</title>
+	<!-- Bootstrap CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Timmana&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald&amp;display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap" rel="stylesheet">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+		integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+		crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="vendors/animate-css/animate.css">
+	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+</head>
+<style>
+	.timeline--wrapper {
+		width: calc(100% - 24px);
+		padding: 12px;
+	}
+
+	.timeline {
+		width: 100%;
+		max-width: 800px;
+		padding: 15px 0 0 0;
+		position: relative;
+		/* box-shadow: 0.5rem 0.5rem 2rem 0 rgba(0, 0, 0, 0.2); */
+		margin: 50px auto;
+	}
+
+	.timeline:before {
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: calc(33% + 6px);
+		bottom: 0px;
+		width: 0px;
+		border: 2px solid;
+	}
+
+	.timeline:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	@media only screen and (max-width: 768px) {
+
+		/* For mobile phones: */
+		.timeline:before {
+			left: calc(1% + 6px);
+		}
+	}
+
+
+
+	.body-container {
+		position: relative;
+		margin-left: 30px;
+	}
+
+	.timeline-item--no-children .body-container {
+		background: transparent;
+		box-shadow: none;
+	}
+
+	.body-container:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.timeline-item-date {
+		position: absolute;
+		top: -12px;
+		left: 0;
+		background: #ddd;
+		padding: 1px;
+		-webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+		clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+		height: 52px;
+		box-sizing: border-box;
+		width: 90%;
+	}
+
+	.timeline-item-dateinner {
+		background: #e86971;
+		color: #fff;
+		padding: 0;
+		font-size: 16px;
+		font-weight: bold;
+		margin: 0;
+		border-right-color: transparent;
+		-webkit-clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+		clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%);
+		height: 50px;
+		width: 100%;
+		display: block;
+		line-height: 52px;
+		text-indent: 15px;
+	}
+
+	.timeline-item--no-children .body-container::before {
+		display: none;
+	}
+
+	.entry {
+		clear: both;
+		text-align: left;
+		position: relative;
+	}
+
+	.timeline--animate .entry .is-hidden {
+		visibility: hidden;
+	}
+
+	.timeline--animate .entry .bounce-in {
+		visibility: visible;
+		-webkit-animation: bounce-in 0.4s;
+		-moz-animation: bounce-in 0.4s;
+		animation: bounce-in 0.4s;
+	}
+
+	.entry .title {
+		margin-bottom: 0.5em;
+		float: left;
+		width: 34%;
+		position: relative;
+		height: 32px;
+	}
+
+	.entry .title:before {
+		content: "";
+		position: absolute;
+		width: 8px;
+		height: 8px;
+		border: 4px solid;
+		background-color: #ffffff;
+		border-radius: 100%;
+		top: 15%;
+		right: -8px;
+		z-index: 99;
+		box-sizing: content-box;
+	}
+
+	.entry .body {
+		margin: 0 0 3em;
+		float: right;
+		width: 66%;
+		color: #333;
+	}
+
+	.entry .body p {
+		line-height: 1.4em;
+	}
+
+	.entry .body h1,
+	.entry .body h2,
+	.entry .body h3,
+	.entry .body h4,
+	.entry .body h5,
+	.entry .body h6 {
+		margin: 0;
+	}
+
+	.entry .body p:first-child {
+		margin-top: 0;
+		font-weight: 400;
+	}
+
+	@-o-keyframes bounce-in {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(0.5);
+		}
+
+		100% {
+			-webkit-transform: scale(1);
+		}
+	}
+
+	@-webkit-keyframes bounce-in {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(0.5);
+		}
+
+		100% {
+			-webkit-transform: scale(1);
+		}
+	}
+
+	@-moz-keyframes bounce-in {
+		0% {
+			opacity: 0;
+			-moz-transform: scale(0.5);
+		}
+
+		100% {
+			-moz-transform: scale(1);
+		}
+	}
+
+	@keyframes bounce-in {
+		0% {
+			opacity: 0;
+			-webkit-transform: scale(0.5);
+			-moz-transform: scale(0.5);
+			-ms-transform: scale(0.5);
+			-o-transform: scale(0.5);
+			transform: scale(0.5);
+		}
+
+		100% {
+			-webkit-transform: scale(1);
+			-moz-transform: scale(1);
+			-ms-transform: scale(1);
+			-o-transform: scale(1);
+			transform: scale(1);
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+
+		/* For mobile phones: */
+		.entry .title {
+			float: left;
+			width: 70%;
+		}
+
+		.timeline-item-date {
+			margin-left: 30px;
+		}
+
+		.entry .title:before {
+			top: 15%;
+			left: 3px;
+			right: auto;
+			z-index: 99;
+		}
+
+		.entry .body {
+			margin: 20px 0 3em;
+			float: right;
+			width: 99%;
+		}
+	}
+</style>
+
+<body>
+
+	<!--================Header Menu Area =================-->
+	<header class="header_area">
+		<div class="main_menu" id="mainNav">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container box_1620">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<button class="navbar-toggler" type="button" data-toggle="collapse"
+						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+							<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
+							<li class="nav-item"><a class="nav-link" href="#">Education</a>
+							<li class="nav-item">
+								<a href="portfolio.html" class="nav-link">Project</a>
+							</li> 
+							<li class="nav-item">
+								<a href="blog.html" class="nav-link">Blog</a>
+							</li> 
+						</ul>
+					</div> 
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================Header Menu Area =================-->
+
+	<div >
+		<div>
+			<div>
+				<div class="timeline--wrapper">
+					<div class="timeline timeline--animate" style="color: rgb(221, 221, 221);">
+						<div id="" class="entry">
+							<div class="title">
+								<div class="bounce-in"><span class="timeline-item-date"><time
+											class="timeline-item-dateinner" title="2019"
+											style="background: rgb(8, 255, 200); color: rgb(0, 0, 0);">2019</time></span>
+								</div>
+							</div>
+							<div class="body">
+								<div class="body-container bounce-in"
+									style="padding: 20px; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0.5rem 0.5rem 2rem 0px;">
+									<h3 style="color: rgb(97, 184, 255);"><a href="http://velammalitech.edu.in/"
+											style="text-decoration: none;">Velammal Institute Of Technology</a></h3>
+									<p>
+										<ul>
+											<li style="margin-top: 1rem;">Completed My Bachelor of Engineering in the
+												department of ComputerScience Engineering from 2015-2019 with <b>7.21 CGPA</b>.</li>
+											<li style="margin-top: 1rem;">I organise Technical event in Enthrone 2K18 –
+												A National Level Technical Symposium from the Department of Computer
+												Science and Engineering.</li>
+										</ul>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="" class="entry">
+							<div class="title">
+								<div class="bounce-in"><span class="timeline-item-date"><time
+											class="timeline-item-dateinner" title="2015"
+											style="background: rgb(8, 255, 200); color: rgb(0, 0, 0);">2015</time></span>
+								</div>
+							</div>
+							<div class="body">
+								<div class="body-container bounce-in"
+									style="padding: 20px; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0.5rem 0.5rem 2rem 0px;">
+									<h3 style="color: rgb(97, 184, 255);"> <a href="#"
+											style="text-decoration: none;">SKV Matric Higher Secondary School</a></h3>
+									<p style="margin-top: 1rem;">I Completed My 12th Grade (Higher Secondary Leaving
+										Certificate) with <b>90.41%</b> in 2015.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="" class="entry">
+							<div class="title">
+								<div class="bounce-in"><span class="timeline-item-date"><time
+											class="timeline-item-dateinner" title="2013"
+											style="background: rgb(8, 255, 200); color: rgb(0, 0, 0);">2013</time></span>
+								</div>
+							</div>
+							<div class="body">
+								<div class="body-container bounce-in"
+									style="padding: 20px; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0.5rem 0.5rem 2rem 0px;">
+									<h3 style="color: rgb(97, 184, 255);"> <a href="http://www.pinkzschool.com/"
+											style="text-decoration: none;">Pinkz Public School</a></h3>
+									<p style="margin-top: 1rem;">I Finished 10th Grade (Secondary School Leaving
+										Certificate) with <b>85.2%</b> in 2013 and I won Inter-school chess 
+										competitions.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot">
+			<div class="foot"></div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
+	<script src="js/theme.js"></script>
+</body>
+
+</html>
